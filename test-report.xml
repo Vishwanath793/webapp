@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="C:\Users\U1137881\OneDrive - IQVIA\RBV Project\rbv-core\src\features\common\utils\__tests__\features.test.ts">
+    <testCase name="itemizedTableRowValidation itemizedTableRowValidation" duration="4"/>
+    <testCase name="handleProgramNameValidation handleProgramNameValidation" duration="1"/>
+    <testCase name="handleProgramNameValidation handleProgramNameValidation" duration="0"/>
+    <testCase name="handleProgramNameValidation handleProgramNameValidation" duration="1"/>
+    <testCase name="automateColumnValueChecks automateColumnValueChecks" duration="1"/>
+    <testCase name="itemizedTableTypeColumnCheck itemizedTableTypeColumnCheck" duration="1"/>
+    <testCase name="itemizedTableRowValidation should validate program name correctly" duration="1"/>
+    <testCase name="itemizedTableRowValidation should return error for program name exceeding 50 characters" duration="3"/>
+    <testCase name="itemizedTableRowValidation should return error for blank program name" duration="1"/>
+    <testCase name="itemizedTableRowValidation should return formData with file and session storage values" duration="7"/>
+    <testCase name="itemizedTableRowValidation should return formData with file and empty session storage values if not set" duration="5"/>
+    <testCase name="handleProgramNameValidation should validate program name correctly" duration="1"/>
+    <testCase name="handleProgramNameValidation should return error for program name exceeding 50 characters" duration="2"/>
+    <testCase name="handleProgramNameValidation should return error for blank program name" duration="2"/>
+    <testCase name="automateColumnValueChecks should update row correctly for PROGRAM_TYPE_ACCESSOR" duration="1"/>
+    <testCase name="itemizedTableTypeColumnCheck should update SHELL_ACCESSOR to N/A for valid program type" duration="1"/>
+    <testCase name="itemizedTableTypeColumnCheck should retain original SHELL_ACCESSOR for invalid program type" duration="0"/>
+    <testCase name="itemizedTableTypeColumnCheck should return formData with file and session storage values" duration="3"/>
+    <testCase name="itemizedTableTypeColumnCheck should update each item with null values and add sourceData" duration="5"/>
+    <testCase name="itemizedTableTypeColumnCheck prepareAndDownloadFile should create a blob and trigger a download" duration="71"/>
+    <testCase name="itemizedTableTypeColumnCheck should return errorObject unchanged when key is not PROGRAM_NAME_ACCESSOR" duration="3"/>
+    <testCase name="itemizedTableTypeColumnCheck should return editingRow unchanged when key is not PROGRAM_TYPE_ACCESSOR" duration="1"/>
+    <testCase name="automateColumnValueChecks automateColumnValueChecks" duration="1"/>
+    <testCase name="automateColumnValueChecks automateColumnValueChecks" duration="1"/>
+    <testCase name="itemizedTableTypeColumnCheck itemizedTableTypeColumnCheck" duration="1"/>
+    <testCase name="itemizedTableProgramNameColumnCheck itemizedTableProgramNameColumnCheck" duration="1"/>
+    <testCase name="itemizedTableProgramNameColumnCheck itemizedTableProgramNameColumnCheck" duration="1"/>
+    <testCase name="itemizedTableProgramNameColumnCheck itemizedTableProgramNameColumnCheck" duration="13"/>
+    <testCase name="mapSaveApiPayload should map data correctly" duration="3"/>
+    <testCase name="mapSaveApiPayload should map data correctly when updated rows are not matching" duration="2"/>
+    <testCase name="mapSaveApiPayload should use default value when isActive is falsy" duration="2"/>
+    <testCase name="getUpdatedObjects should return updated objects when there are changes" duration="1"/>
+    <testCase name="getUpdatedObjects should not return objects when there are no changes" duration="0"/>
+    <testCase name="getUpdatedObjects should handle empty rowsData" duration="0"/>
+    <testCase name="getUpdatedObjects should handle rows with additional properties" duration="1"/>
+    <testCase name="setUpdatedDataToSource should update rows with matching IDs" duration="2"/>
+    <testCase name="setUpdatedDataToSource should leave rows without matching IDs unchanged" duration="1"/>
+    <testCase name="setUpdatedDataToSource should handle empty source array" duration="1"/>
+    <testCase name="setUpdatedDataToSource should handle empty editedData array" duration="1"/>
+    <testCase name="setUpdatedDataToSource should handle no matching IDs" duration="1"/>
+  </file>
+</testExecutions>

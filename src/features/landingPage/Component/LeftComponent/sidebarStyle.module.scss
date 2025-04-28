@@ -1,0 +1,59 @@
+.blade > div > div > div {
+  background-image: linear-gradient(135deg, #250056, #011a74) !important;
+}
+.blade > div {
+  width: fit-content;
+}
+
+.myLinks {
+  margin-top: 1rem;
+  box-sizing: border-box;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.search {
+  box-sizing: border-box;
+  border: 1px solid white;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+}
+.reports {
+  box-sizing: border-box;
+  border: 1px solid white;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.myLinks > div > a {
+  text-decoration-line: none;
+}
+.search > a {
+  text-decoration-line: none;
+}
+.reports > div > a {
+  text-decoration-line: none;
+}
+.myLinks > div > a:hover {
+  text-decoration-color: whitesmoke;
+  text-decoration-line: underline;
+  text-underline-offset: 0.3rem;
+}
+.search > a:hover {
+  text-decoration-color: whitesmoke;
+  text-decoration-line: underline;
+  text-underline-offset: 0.3rem;
+}
+.reports > div > a:hover {
+  text-decoration-color: whitesmoke;
+  text-decoration-line: underline;
+  text-underline-offset: 0.3rem;
+}
+.searchDCF {
+  margin-top: -1rem;
+}
+.searchProtocol {
+  margin-top: -0.25rem;
+}
