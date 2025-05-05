@@ -1,8 +1,9 @@
-.blade > div > div > div {
+.blade > div > div {
   background-image: linear-gradient(135deg, #250056, #011a74) !important;
 }
 .blade > div {
   width: fit-content;
+  background-image: linear-gradient(135deg, #250056, #011a74) !important;
 }
 
 .myLinks {
@@ -16,14 +17,14 @@
   box-sizing: border-box;
   border: 1px solid white;
   padding: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border-radius: 0.5rem;
 }
 .reports {
   box-sizing: border-box;
   border: 1px solid white;
   padding: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
 }
@@ -52,7 +53,7 @@
   text-underline-offset: 0.3rem;
 }
 .searchDCF {
-  margin-top: -1rem;
+  margin-top: 0rem;
 }
 .searchProtocol {
   margin-top: -0.25rem;

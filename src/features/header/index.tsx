@@ -69,6 +69,7 @@ function Header({ userName }: { userName: string }): JSX.Element {
           variant="classic"
           LogoComponent={RbvManagerName}
           menuItems={menuItems}
+          id="NavCheck"
         />
       </div>
     </>

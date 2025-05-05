@@ -13,6 +13,7 @@ import style from "./siteDeviceComponent.module.scss";
 import TextfieldElement from "../../../common/atoms/textfieldElement/index";
 import DatePickerElement from "../../../common/atoms/datePickerElement/index";
 import TimePickerElement from "../../../common/atoms/timePickerElement/index";
+
 import SelectElement from "../../../common/atoms/selectElement/index";
 // import {
 //   compareStrings,
@@ -159,7 +160,7 @@ const SiteDeviceComponent: FC = () => {
             xs={3}
             style={{ backgroundColor: "#f8f9fb", padding: "0.75rem" }}
           >
-            <Typography>Protocol Details</Typography>
+            <Typography>Protocol Detailssss</Typography>
             <SelectElement
               label="Protocol Number:"
               helperText=""

@@ -8,7 +8,7 @@ export function getEnvBasedOnHostName() {
       BIS_HOME_URL: "https://dev-biosis.work.iqvia.com",
       HOST: "localhost",
       CLIENT_ID: "",
-      CB_URL: "http://localhost:3081",
+      CB_URL: "http://localhost:3082",
       AUTH_URL: authenticationUrl,
     },
     DEV: {

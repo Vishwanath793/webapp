@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-    "serve": "serve build -p 3081",
+    "serve": "serve build -p 3082",
     "clean": "rm -rf build",
     "test": "cross-env TEST_TYPE=unit_test jest --coverage --testResultsProcessor='jest-sonar-reporter'",
     "coverage": "npm run test -- --coverage --watchAll=false"
@@ -23,6 +23,9 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^12.0.2",
     "cross-env": "^7.0.3",
+    "d3": "^7.9.0",
+    "d3-array": "^3.2.0",
+    "d3-contour": "^4.0.2",
     "lodash": "^4.17.21",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
