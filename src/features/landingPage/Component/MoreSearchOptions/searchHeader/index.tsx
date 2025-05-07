@@ -1,5 +1,6 @@
 import Link from "apollo-react/components/Link";
 import Typography from "apollo-react/components/Typography";
+import styles from "./SearchHeader.module.scss";
 import React, { FC } from "react";
 
 const SearchHeader: FC = () => {
@@ -7,7 +8,9 @@ const SearchHeader: FC = () => {
     <div style={{ display: "flex", width: "80rem" }}>
       <Typography variant="body2">
         You Searched for Protocol Number:
-        <Link size="small">10051060_RV</Link>
+        <Link size="small" className={styles.link}>
+          10051060_RV
+        </Link>
       </Typography>
       <div
         style={{
@@ -25,11 +28,15 @@ const SearchHeader: FC = () => {
         >
           <Typography variant="caption">
             Total ECGs:
-            <Link size="small">1234</Link>
+            <Link size="small" className={styles.link}>
+              1234
+            </Link>
           </Typography>
           <Typography variant="caption">
             Total DCFs:
-            <Link size="small">0</Link>
+            <Link size="small" className={styles.link}>
+              0
+            </Link>
           </Typography>
         </div>
         <div
@@ -41,11 +48,15 @@ const SearchHeader: FC = () => {
         >
           <Typography variant="caption">
             ECGs Analysed:
-            <Link size="small">1200</Link>
+            <Link size="small" className={styles.link}>
+              1200
+            </Link>
           </Typography>
           <Typography variant="caption">
             DCFs Resolved:
-            <Link size="small">0</Link>
+            <Link size="small" className={styles.link}>
+              0
+            </Link>
           </Typography>
         </div>
         <div
@@ -57,11 +68,15 @@ const SearchHeader: FC = () => {
         >
           <Typography variant="caption">
             ECGs Pending:
-            <Link size="small">0</Link>
+            <Link size="small" className={styles.link}>
+              0
+            </Link>
           </Typography>
           <Typography variant="caption">
             DCFs Pending:
-            <Link size="small">0</Link>
+            <Link size="small" className={styles.link}>
+              0
+            </Link>
           </Typography>
         </div>
       </div>

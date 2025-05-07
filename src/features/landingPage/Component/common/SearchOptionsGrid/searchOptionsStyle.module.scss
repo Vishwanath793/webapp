@@ -3,6 +3,11 @@
   margin-left: auto;
   width: fit-content !important;
   margin-top: -0.5rem !important;
+  button {
+    min-height: 1rem !important;
+    margin-top: 17px;
+    margin-bottom: 8px;
+  }
 }
 
 .common {
@@ -10,5 +15,5 @@
 }
 
 .datePicker {
-  margin-top: -2rem !important;
+  margin-top: 0rem !important;
 }

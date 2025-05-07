@@ -1,7 +1,4 @@
-import Link from "apollo-react/components/Link";
-import Typography from "apollo-react/components/Typography";
 import { Column } from "apollo-react/components/Table";
-
 interface ChartDataPoint {
   x: string;
   y: number | undefined;
@@ -235,22 +232,27 @@ export const rowsOutstandingdcfs: Array<{
     outstandingdcfs: "3",
   },
 ];
-
-export const ecgData = [
+interface DataPoint {
+  country: string;
+  yield: number;
+}
+export const ecgData: DataPoint[] = [
   { country: "EREC", yield: 766 },
   { country: "EPDC", yield: 3 },
   { country: "EANL", yield: 695 },
 ];
 
-export const dcfData = [
+export const dcfData: DataPoint[] = [
   { country: "DRAS", yield: 154 },
   { country: "DRES", yield: 151 },
   { country: "DOST", yield: 3 },
 ];
 
-export const projectSiteMaxOutstandingDCFsData = [{ country: "201", yield: 3 }];
+export const projectSiteMaxOutstandingDCFsData: DataPoint[] = [
+  { country: "201", yield: 3 },
+];
 
-export const projectSiteData = [
+export const projectSiteData: DataPoint[] = [
   { country: "201", yield: 92 },
   { country: "301", yield: 34 },
   { country: "450", yield: 10 },
@@ -258,7 +260,7 @@ export const projectSiteData = [
   { country: "202", yield: 8 },
 ];
 
-export const DataTransferData = [
+export const DataTransferData: DataPoint[] = [
   { country: "Jan", yield: 1 },
   { country: "Feb", yield: 1 },
   { country: "Mar", yield: 0 },
@@ -273,7 +275,7 @@ export const DataTransferData = [
   { country: "Dec", yield: 1 },
 ];
 
-export const outstandingDCFsData = [
+export const outstandingDCFsData: DataPoint[] = [
   { country: ">20 Days", yield: 3 },
   { country: "16-20 Days", yield: 0 },
   { country: "11-15 Days", yield: 0 },
@@ -281,12 +283,12 @@ export const outstandingDCFsData = [
   { country: "<5 Days", yield: 0 },
 ];
 
-export const ecgInterpretationData = [
+export const ecgInterpretationData: DataPoint[] = [
   { country: "NOR", yield: 902 },
   { country: "ABN", yield: 298 },
 ];
 
-export   const dataLineChart: ChartData[] = [
+export const dataLineChart: ChartData[] = [
   {
     label: "ECGs",
     data: [

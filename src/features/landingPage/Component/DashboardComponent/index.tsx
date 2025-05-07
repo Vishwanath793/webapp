@@ -118,8 +118,8 @@ const DashboardComponent: FC = () => {
             <Accordion defaultExpanded size="small">
               <AccordionSummary>
                 <Typography>ECG Status</Typography>
-                <Typography variant="bodySmall" emphasis="high">
-                  This Graph displays the ECG status for a protocol123.
+                <Typography className={style.statusText}>
+                  This Graph displays the ECG status for a protocol.
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -153,25 +153,20 @@ const DashboardComponent: FC = () => {
                 <Typography variant="bodySmall" emphasis="high">
                   DCFs Outstanding
                 </Typography>
+                <Typography className={style.statusText}>
+                  This Graph displays the no. of days DCFs Outstanding for a
+                  protocol.
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <div
                   id="DCFsOutstanding"
                   style={{ backgroundColor: "#f8f9fb" }}
                 >
-                  <Typography sx={{ marginBottom: 4 }} variant="bodyDefault">
-                    This Graph displays the no. of days DCFs Outstanding for a
-                    protocol.
-                  </Typography>
                   <ResponsiveHorizontalBarChart
                     data={outstandingDCFsData}
                     xaxis=""
                   />
-                  {/* <BarChart
-                    data={outstandingDCFsData}
-                    width={350}
-                    height={300}
-                  /> */}
                 </div>
                 <div style={{ backgroundColor: "#f8f9fb", height: "auto" }}>
                   <Table
@@ -187,16 +182,16 @@ const DashboardComponent: FC = () => {
                 <Typography variant="bodySmall" emphasis="high">
                   Project Sites with maximum DCFs Raised
                 </Typography>
+                <Typography className={style.statusText}>
+                  This Graph displays the Top 5 Project Sites with maximum DCFs
+                  Raised.
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <div
                   id="ProjectSiteswithmaximumDCFsRaised"
                   style={{ backgroundColor: "#f8f9fb" }}
                 >
-                  <Typography sx={{ marginBottom: 4 }} variant="bodyDefault">
-                    This Graph displays the Top 5 Project Sites with maximum
-                    DCFs Raised.
-                  </Typography>
                   <ResponsiveHorizontalBarChart
                     data={projectSiteData}
                     xaxis="No. of DFCs"
@@ -216,19 +211,12 @@ const DashboardComponent: FC = () => {
             <Accordion defaultExpanded size="small">
               <AccordionSummary>
                 <Typography>DCF Status</Typography>
-                <Typography variant="bodySmall" emphasis="high">
+                <Typography className={style.statusText}>
                   This Graph displays the DCF status of the Report
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <div id="DCF Status" style={{ backgroundColor: "#f8f9fb" }}>
-                  {/* <Typography
-                    sx={{ marginBottom: 4 }}
-                    variant="bodySmall"
-                    emphasis="high"
-                  >
-                    This Graph displays the DCF status of the Report
-                  </Typography> */}
                   <div
                     style={{
                       padding: "0.1rem",
@@ -241,7 +229,6 @@ const DashboardComponent: FC = () => {
                       xaxis="No. of DFCs"
                     />
                   </div>
-                  {/* <BarChart data={dcfData} width={350} height={300} /> */}
                 </div>
                 <div style={{ backgroundColor: "#f8f9fb", height: "178px" }}>
                   <Table columns={columnsDcfs} rows={rowsDcfs} hidePagination />
@@ -253,25 +240,16 @@ const DashboardComponent: FC = () => {
                 <Typography variant="bodySmall" emphasis="high">
                   Project Sites with maximum outstanding DCFs
                 </Typography>
+                <Typography className={style.statusText}>
+                  This Graph displays top 5 Project sites with maximum
+                  Outstanding DCFs
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <div
                   id="outstandingDCFs"
                   style={{ backgroundColor: "#f8f9fb" }}
                 >
-                  <Typography
-                    sx={{ marginBottom: 4 }}
-                    variant="bodySmall"
-                    emphasis="high"
-                  >
-                    This Graph displays top 5 Project sites with maximum
-                    Outstanding DCFs
-                  </Typography>
-                  {/* <BarChart
-                    data={projectSiteMaxOutstandingDCFsData}
-                    width={350}
-                    height={200}
-                  /> */}
                   <div
                     style={{
                       padding: "0.1rem",
@@ -299,21 +277,16 @@ const DashboardComponent: FC = () => {
                 <Typography variant="bodySmall" emphasis="high">
                   Overall ECG Interpretation
                 </Typography>
+                <Typography className={style.statusText}>
+                  This Graph displays ECGs for various interpretation categories
+                  for the protocol.
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <div
                   id="OverallECGInterpretation"
                   style={{ backgroundColor: "#f8f9fb" }}
                 >
-                  <Typography sx={{ marginBottom: 4 }} variant="bodyDefault">
-                    This Graph displays ECGs for various interpretation
-                    categories for the protocol.
-                  </Typography>
-                  {/* <BarChart
-                    data={ecgInterpretationData}
-                    width={350}
-                    height={300}
-                  /> */}
                   <div
                     style={{
                       padding: "0.1rem",
@@ -341,21 +314,20 @@ const DashboardComponent: FC = () => {
                 <Typography variant="bodySmall" emphasis="high">
                   No. of Data Transfers
                 </Typography>
+                <Typography
+                  className={style.statusText}
+                  id="No. of Data Transfers
+"
+                >
+                  This Graph displays the no. of data transfers over last 12
+                  months for the protocol.
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <div
                   id="NoofDataTransfers"
                   style={{ backgroundColor: "#f8f9fb" }}
                 >
-                  <Typography
-                    sx={{ marginBottom: 4 }}
-                    variant="bodySmall"
-                    emphasis="high"
-                  >
-                    This Graph displays the no. of data transfers over last 12
-                    months for the protocol.
-                  </Typography>
-                  {/* <BarChart data={DataTransferData} width={350} height={500} /> */}
                   <div
                     style={{
                       padding: "0.1rem",

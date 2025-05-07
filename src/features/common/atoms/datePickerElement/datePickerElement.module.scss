@@ -1,15 +1,20 @@
 .datePickerElement > div > div > input {
-  min-height: 28px !important;
-  height: 28px !important;
-  font-size: 14px !important;
+  min-height: 25px !important;
+  height: 25px !important;
 }
 
 .datePickerElement > div > label {
   font-size: 12px !important;
-  margin-bottom: -4px !important;
   font-weight: 500 !important;
+  padding-bottom: 1px !important;
+  margin-bottom: -2px !important;
+}
+
+.datePickerElement > div {
+  margin-top: 2px !important;
+  margin-bottom: 1px !important;
 }
 
 .datePickerElement {
-  margin-top: 6px !important;
+  margin-top: 0px !important;
 }

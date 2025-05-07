@@ -10,7 +10,11 @@
   margin-bottom: -2px !important;
 }
 
+.textfieldElement > div {
+  margin-top: 2px !important;
+  margin-bottom: 1px !important;
+}
 .textfieldElement > div > div > input {
-  min-height: 28px !important;
-  height: 28px !important;
+  min-height: 25px !important;
+  height: 25px !important;
 }

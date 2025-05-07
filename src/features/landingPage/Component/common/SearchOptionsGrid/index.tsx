@@ -174,26 +174,23 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
             isFullWidth
             menuItems={overAllInterpretationMenuItems}
           />
-
-          <div className={styles.datePicker}>
-            <DatePickerElement
-              label="ECG Recording Start Date:"
-              isFullWidth
-              size="small"
-            />
-          </div>
+          <DatePickerElement
+            label="ECG Recording Start Date:"
+            isFullWidth
+            size="small"
+          />
+          {/* <div className={styles.datePicker}></div> */}
           <TextfieldElement
             label="ECG Recording Start Time:"
             size="small"
             isFullWidth
           />
-          <div className={styles.datePicker}>
-            <DatePickerElement
-              label="ECG Recording End Date:"
-              isFullWidth
-              size="small"
-            />
-          </div>
+          <DatePickerElement
+            label="ECG Recording End Date:"
+            isFullWidth
+            size="small"
+          />
+          {/* <div className={styles.datePicker}></div> */}
           <TextfieldElement
             label="ECG Recording Start Time:"
             size="small"
@@ -231,25 +228,24 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
             menuItems={outstandingDaysMenuItems}
           />
 
-          <div className={styles.datePicker}>
-            <DatePickerElement
-              label="DCF Issued Start Date:"
-              isFullWidth
-              size="small"
-            />
-          </div>
+          <DatePickerElement
+            label="DCF Issued Start Date:"
+            isFullWidth
+            size="small"
+          />
+          {/* <div className={styles.datePicker}></div> */}
           <TextfieldElement
             label="DCF Issue Start Time"
             size="small"
             isFullWidth
           />
-          <div className={styles.datePicker}>
-            <DatePickerElement
-              label="DCF Issue End Date:"
-              isFullWidth
-              size="small"
-            />
-          </div>
+          <DatePickerElement
+            label="DCF Issue End Date:"
+            isFullWidth
+            size="small"
+          />
+          {/* <div className={styles.datePicker}>
+          </div> */}
           <TextfieldElement
             label="DCF Issue End Time"
             size="small"

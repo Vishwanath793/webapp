@@ -160,7 +160,7 @@ const SiteDeviceComponent: FC = () => {
             xs={3}
             style={{ backgroundColor: "#f8f9fb", padding: "0.75rem" }}
           >
-            <Typography>Protocol Detailssss</Typography>
+            <Typography>Protocol Details</Typography>
             <SelectElement
               label="Protocol Number:"
               helperText=""
@@ -214,17 +214,17 @@ const SiteDeviceComponent: FC = () => {
               isFullWidth
               isRequired={true}
             />
-            <div style={{ marginTop: "-1.85rem" }}>
-              <DatePickerElement
-                label="DOB:"
-                helperText=""
-                isFullWidth
-                size="small"
-                dateFormat="DD-MMM-YYYY"
-                placeholder="dd-mmm-yyyy"
-                isRequired={true}
-              />
-            </div>
+            <DatePickerElement
+              label="DOB:"
+              helperText=""
+              isFullWidth
+              size="small"
+              dateFormat="DD-MMM-YYYY"
+              placeholder="dd-mmm-yyyy"
+              isRequired={true}
+            />
+            {/* <div style={{ marginTop: "-1.85rem" }}>
+            </div> */}
           </Grid>
           <Grid
             item
@@ -234,14 +234,17 @@ const SiteDeviceComponent: FC = () => {
               padding: "0.75rem",
             }}
           >
-            <div style={{ marginTop: "2rem" }}>
-              <TextfieldElement
-                label="Subject Initials"
-                size="small"
-                isFullWidth
-                disabled
-              />
-            </div>
+            <Typography sx={{ visibility: "hidden" }}>
+              Subject Details
+            </Typography>
+            <TextfieldElement
+              label="Subject Initials"
+              size="small"
+              isFullWidth
+              disabled
+            />
+            {/* <div style={{ marginTop: "2rem" }}>
+            </div> */}
             <SelectElement
               label="Gender"
               helperText=""
@@ -254,16 +257,16 @@ const SiteDeviceComponent: FC = () => {
               menuItems={genderMenuItems}
             />
 
-            <div style={{ marginTop: "-1.85rem" }}>
-              <DatePickerElement
-                label="ECG Recording Date:"
-                helperText=""
-                isFullWidth
-                size="small"
-                dateFormat="DD-MMM-YYYY"
-                placeholder="dd-mmm-yyyy"
-              />
-            </div>
+            <DatePickerElement
+              label="ECG Recording Date:"
+              helperText=""
+              isFullWidth
+              size="small"
+              dateFormat="DD-MMM-YYYY"
+              placeholder="dd-mmm-yyyy"
+            />
+            {/* <div style={{ marginTop: "-1.85rem" }}>
+            </div> */}
             <TimePickerElement
               label="ECG Recording time:"
               helperText=""

@@ -40,11 +40,15 @@ const MoreSearchOptions: FC = () => {
               >
                 <Typography variant="caption">
                   Total ECGs:
-                  <Link size="small">0</Link>
+                  <Link size="small" className={styles.link}>
+                    0
+                  </Link>
                 </Typography>
                 <Typography variant="caption">
                   Total DCFs:
-                  <Link size="small">0</Link>
+                  <Link size="small" className={styles.link}>
+                    0
+                  </Link>
                 </Typography>
               </div>
               <div
@@ -56,11 +60,15 @@ const MoreSearchOptions: FC = () => {
               >
                 <Typography variant="caption">
                   ECGs Analysed:
-                  <Link size="small">0</Link>
+                  <Link size="small" className={styles.link}>
+                    0
+                  </Link>
                 </Typography>
                 <Typography variant="caption">
                   DCFs Resolved:
-                  <Link size="small">0</Link>
+                  <Link size="small" className={styles.link}>
+                    0
+                  </Link>
                 </Typography>
               </div>
               <div
@@ -78,7 +86,9 @@ const MoreSearchOptions: FC = () => {
                 </Typography>
                 <Typography variant="caption">
                   DCFs Pending:
-                  <Link size="small">0</Link>
+                  <Link size="small" className={styles.link}>
+                    0
+                  </Link>
                 </Typography>
               </div>
             </div>

@@ -10,6 +10,7 @@ import UserIcon from "apollo-react-icons/User";
 import { getEnvBasedOnHostName } from "../common/utils/projectEnvPath";
 import navStyles from "./Header.module.scss";
 import CONSTANTS from "../../constants/appRoutes";
+import { useNavigate } from "react-router-dom";
 
 const { ROUTES } = CONSTANTS;
 const RbvManagerName: any = () => {
@@ -24,10 +25,12 @@ const RbvManagerName: any = () => {
 };
 
 function Header({ userName }: { userName: string }): JSX.Element {
+  const navigate = useNavigate();
+
   const menuItems: NavigationBarMenuItem[] = [
     {
       text: <span className={navStyles.menuText}>Home</span>,
-      pathname: ROUTES.MENU_LINK.MY_DASHBOARD,
+      pathname: "home",
       variant: "classic",
     },
   ];
@@ -60,6 +63,7 @@ function Header({ userName }: { userName: string }): JSX.Element {
       },
     ],
   };
+
   return (
     <>
       <div>

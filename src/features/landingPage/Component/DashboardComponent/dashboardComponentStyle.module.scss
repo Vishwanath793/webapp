@@ -53,6 +53,7 @@
 
 .screenCards {
   display: flex;
+
   .leftCards {
     margin: 5rem !important;
     padding: 1rem !important;
@@ -60,6 +61,11 @@
   .rightCards {
     margin: 5rem !important;
     padding: 1rem !important;
+  }
+  .statusText {
+    font-weight: 400 !important;
+    font-size: 0.7rem !important;
+    color: var(--text-secondary);
   }
   table {
     thead {

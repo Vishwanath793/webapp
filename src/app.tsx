@@ -242,6 +242,7 @@ function CoreApp({ userId, deliveryId }: any) {
             <Suspense fallback={<Loader overlayClassName="fallback-loader" />}>
               <Routes>
                 <Route path="/" element={<DashboardComponent />} />
+                <Route path="/home" element={<DashboardComponent />} />
                 <Route
                   path={ROUTES.MENU_LINK.SITE_DEVICE_ECG_UPLOAD}
                   element={<SiteDeviceComponent />}
