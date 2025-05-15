@@ -1,0 +1,197 @@
+.dashBoard {
+  padding: 0.75rem;
+  margin-top: 4.9rem;
+  margin-right: 0.4rem;
+  outline: 0.01rem solid black;
+}
+.charts {
+  margin: 0.15rem;
+  padding-left: 1rem;
+  outline: 0.01rem solid black;
+  .protonum {
+    div {
+      margin-top: 2px !important;
+      margin-bottom: 1px !important;
+      width: 12rem !important;
+    }
+
+    div > label {
+      font-size: 0.8rem !important;
+      font-weight: 500 !important;
+      margin-bottom: 0.2rem !important;
+      color: black !important;
+    }
+
+    div > div > div:nth-child(1) {
+      height: 28px !important;
+      min-height: 28px !important;
+      padding-top: 3px !important;
+    }
+  }
+  .tasksummary {
+    table {
+      thead {
+        tr {
+          background-color: #e4e4e4;
+          height: 2rem !important;
+          th {
+            font-size: 1.2rem !important;
+            font-weight: 500 !important;
+            color: black !important;
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: 2rem !important;
+          td {
+            font-size: 0.8rem !important;
+            font-weight: 500 !important;
+            color: black !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.screenCards {
+  display: flex;
+  .Mui-expanded {
+    background-color: #f6f7fb !important;
+  }
+  .accordianCards {
+    .summary {
+      font-weight: 700 !important;
+    }
+    margin: 5rem !important;
+    padding: 1rem !important;
+    width: 100% !important;
+    outline: 0.01rem solid black;
+    .statusText {
+      font-weight: 500 !important;
+      font-size: 0.9rem !important;
+      margin-top: 0.02rem !important;
+    }
+    .table-margin {
+      margin-bottom: 0.5rem !important;
+    }
+
+    table {
+      thead {
+        tr {
+          background-color: #e4e4e4;
+          height: 2rem !important;
+          border: 1px solid;
+          th {
+            border: 1px solid;
+            font-size: 0.8rem !important;
+            font-weight: 500 !important;
+            color: black !important;
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: 2rem !important;
+          border: 1px solid;
+          p,
+          a,
+          td {
+            font-size: 0.9rem !important;
+            font-weight: 500 !important;
+          }
+          td {
+            border: 1px solid;
+          }
+        }
+        tr:nth-child(odd) {
+          background-color: #ffffff; /* Light gray for odd rows */
+        }
+
+        tr:nth-child(even) {
+          background-color: #f2f2f2; /* White for even rows */
+        }
+      }
+    }
+  }
+
+  .chart-background {
+    background-image: linear-gradient(to bottom, #e1eef2, #fff);
+  }
+}
+
+/* For screens smaller than 768px (e.g., tablets and mobile phones) */
+
+/* For screens between 769px and 1024px (e.g., tablets in landscape mode) */
+@media (max-width: 1024px) {
+  .screenStyle {
+    .linechart,
+    .tasksummary {
+      /* Stacks the charts vertically */
+      width: 100%; /* Full width on smaller screens */
+      margin-right: 0; /* Removes spacing */
+      margin-top: 1rem;
+    }
+  }
+  .linechart {
+    border: 1px solid;
+  }
+  .screenCards {
+    display: block;
+    .accordianCards {
+      margin: 0.2rem !important;
+      padding: 1rem !important;
+      width: 95% !important;
+      div.MuiAccordionDetails-root {
+        padding: 0px 0px !important;
+        margin-top: 0.2rem !important;
+      }
+      div.MuiPaper-root {
+        margin-top: 0.2rem !important;
+      }
+      div {
+        .Mui-expanded {
+          background-color: #f6f7fb !important;
+        }
+      }
+    }
+  }
+}
+
+/* For screens larger than 1024px (e.g., desktops) */
+@media (min-width: 1025px) {
+  .screenStyle {
+    display: flex;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    .linechart {
+      float: left;
+      width: 62%; /* Default width for large screens */
+      margin-right: 2%;
+    }
+
+    .tasksummary {
+      float: left;
+      width: 36%; /* Default width for large screens */
+      height: 17rem;
+      padding-right: 0.5rem;
+    }
+  }
+  .screenCards {
+    display: flex;
+    .accordianCards {
+      margin: 0.2rem !important;
+      padding: 1rem !important;
+      width: 100% !important;
+      div.MuiAccordionDetails-root {
+        padding: 0px 0px !important;
+      }
+      div {
+        .Mui-expanded {
+          background-color: #f6f7fb !important;
+        }
+      }
+    }
+  }
+}

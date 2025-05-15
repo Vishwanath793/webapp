@@ -2,6 +2,7 @@ import Table, { Column } from "apollo-react/components/Table";
 import React, { FC } from "react";
 import FilePdf from "apollo-react-icons/FilePdf";
 import Card from "apollo-react/components/Card";
+import styles from "../DetailsPage.module.scss";
 const columns: Column[] = [
   {
     header: "SI#",
@@ -42,7 +43,11 @@ const rowsEcgs: Array<{
 ];
 const SiteDetailsPage: FC = () => {
   return (
-    <Card interactive={false} style={{ marginTop: "1rem" }}>
+    <Card
+      className={styles.DetailsPage}
+      interactive={false}
+      style={{ marginTop: "1rem" }}
+    >
       <Table columns={columns} rows={rowsEcgs} />
     </Card>
   );

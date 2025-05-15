@@ -1,7 +1,7 @@
 import Typography from "apollo-react/components/Typography";
 import React, { FC } from "react";
 
-import Styles from "./selectElement.module.scss";
+import "./selectElement.scss";
 import Select from "apollo-react/components/Select";
 import MenuItem from "apollo-react/components/MenuItem";
 
@@ -35,7 +35,7 @@ const SelectElement: FC<SelectComponentProps> = ({
   disabled = false,
 }) => {
   return (
-    <div className={Styles.selectElement}>
+    <div className="selectElement">
       <Select
         label={label}
         value={value}

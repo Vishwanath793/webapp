@@ -1,0 +1,31 @@
+.Accordion-moresearch {
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
+  .accordionDetail {
+    border: 0.01rem solid #000000 !important;
+    div.MuiAccordionDetails-root {
+      padding: 0px 0px !important;
+      margin-top: 0.2rem !important;
+    }
+    div.MuiPaper-root {
+      margin-top: 0.2rem !important;
+      background-color: #ffffff !important;
+    }
+    div.MuiPaper-root:hover {
+      margin-top: 0.2rem !important;
+      background-color: #ffffff !important;
+    }
+    div {
+      .Mui-expanded {
+        background-color: #ffffff !important;
+      }
+    }
+    div {
+      .Mui-expanded:hover {
+        background-color: #ffffff !important;
+      }
+    }
+  }
+}

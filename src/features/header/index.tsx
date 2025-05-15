@@ -30,7 +30,7 @@ function Header({ userName }: { userName: string }): JSX.Element {
   const menuItems: NavigationBarMenuItem[] = [
     {
       text: <span className={navStyles.menuText}>Home</span>,
-      pathname: "home",
+      pathname: "/home",
       variant: "classic",
     },
   ];

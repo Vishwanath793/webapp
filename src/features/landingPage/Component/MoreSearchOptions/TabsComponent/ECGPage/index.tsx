@@ -3,6 +3,8 @@ import React, { FC } from "react";
 import FilePdf from "apollo-react-icons/FilePdf";
 import { ImageList } from "@mui/material";
 import Typography from "apollo-react/components/Typography";
+import styles from "../DetailsPage.module.scss";
+import Card from "apollo-react/components/Card";
 const columns: Column[] = [
   {
     header: "SI#",
@@ -64,10 +66,361 @@ const rowsEcgs: Array<{
     si: 1,
     reports: (
       <>
-        <img src={require("../../../common/icons/icon_report.png")}></img>
-        <img src={require("../../../common/icons/icon_Dreport.png")}></img>
-        <img src={require("../../../common/icons/icon_waveform.png")}></img>
         <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 2,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 3,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 1,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 1,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 1,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 1,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 1,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 1,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 1,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 1,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_preliminaryreport.png")}
+        ></img>
+      </>
+    ),
+    pendingdcfs: "No",
+    recording: "	21-JUL-2009 16:27:07",
+    gender: "Male",
+    dateofbirth: "08/05/1991",
+    subjectid: "1001",
+    projectsiteid: "	001",
+    protocolnumber: "	691612",
+    id: "	ESCRIBETEST",
+  },
+  {
+    si: 1,
+    reports: (
+      <>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_report.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_Dreport.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
+          src={require("../../../common/icons/icon_waveform.png")}
+        ></img>
+        <img
+          style={{ marginLeft: ".2rem" }}
           src={require("../../../common/icons/icon_preliminaryreport.png")}
         ></img>
       </>
@@ -84,9 +437,13 @@ const rowsEcgs: Array<{
 ];
 const ECGPage: FC = () => {
   return (
-    <>
-      <Table columns={columns} rows={rowsEcgs} hidePagination />
-    </>
+    <Card
+      className={styles.DetailsPage}
+      interactive={false}
+      style={{ marginTop: "1rem" }}
+    >
+      <Table columns={columns} rows={rowsEcgs} />
+    </Card>
   );
 };
 

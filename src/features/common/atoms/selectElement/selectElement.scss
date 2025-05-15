@@ -6,12 +6,12 @@
 .selectElement > div > label {
   font-size: 12px !important;
   font-weight: 500 !important;
-  padding-bottom: 1px !important;
-  margin-bottom: -2px !important;
+  padding-bottom: 0px !important;
+  margin-bottom: -0.2rem !important;
 }
 
 .selectElement > div > div > div:nth-child(1) {
-  height: 25px !important;
-  min-height: 25px !important;
-  padding-top: 3px !important;
+  min-height: 1.35rem !important;
+  height: 1.35rem !important;
+  padding-top: 0px !important;
 }

@@ -5,15 +5,25 @@ import Card from "apollo-react/components/Card";
 import SearchOptionsGrid from "../common/SearchOptionsGrid";
 import Link from "apollo-react/components/Link";
 import styles from "./moreSearchOptions.module.scss";
+import { searchClickstate } from "../../slice/landingPageSlice";
+import { useSelector } from "react-redux";
 
 const MoreSearchOptions: FC = () => {
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const handleSearchClick = () => {
     setIsSearchClicked(true);
   };
+  const searchEvent = useSelector(searchClickstate);
   return (
-    <Card style={{ marginTop: "5rem", padding: "0.75rem" }}>
-      {!isSearchClicked ? (
+    <Card
+      style={{
+        marginTop: "5rem",
+        marginRight: "1rem",
+        padding: "0.75rem",
+        border: "1px solid black",
+      }}
+    >
+      {!searchEvent ? (
         <>
           <Typography variant="body2">ECG</Typography>
           <Typography variant="body2" emphasis="high">
@@ -29,6 +39,7 @@ const MoreSearchOptions: FC = () => {
                 width: "75%",
                 justifyContent: "end",
                 marginTop: "-2.5rem",
+                flexWrap: "wrap",
               }}
             >
               <div
@@ -80,7 +91,7 @@ const MoreSearchOptions: FC = () => {
               >
                 <Typography variant="caption">
                   ECGs Pending:
-                  <Link className={styles.link} size="small">
+                  <Link size="small" className={styles.link}>
                     0
                   </Link>
                 </Typography>
@@ -93,7 +104,7 @@ const MoreSearchOptions: FC = () => {
               </div>
             </div>
           </div>
-          <SearchOptionsGrid searchClick={handleSearchClick} />
+          <SearchOptionsGrid hasBorder={true} />
         </>
       ) : (
         <>

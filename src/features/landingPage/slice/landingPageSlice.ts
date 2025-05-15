@@ -8,6 +8,8 @@ export interface LandingPageState {
   saveActionError: string;
   isLoggedInUserTeamLead: boolean;
   isLocked: boolean | null;
+  tabValue: number | string;
+  isSearchClicked: boolean;
 }
 
 const initialState: LandingPageState = {
@@ -18,6 +20,8 @@ const initialState: LandingPageState = {
   saveActionError: "",
   isLoggedInUserTeamLead: false,
   isLocked: null,
+  tabValue: 2,
+  isSearchClicked: false,
 };
 
 const landingPageSlice = createSlice({
@@ -39,6 +43,12 @@ const landingPageSlice = createSlice({
     lockQecgForm: (state, action: PayloadAction<any>) => {
       state.isLocked = null;
     },
+    setTabValue: (state, action: PayloadAction<number>) => {
+      state.tabValue = action.payload;
+    },
+    toggleSearchClicked: (state) => {
+      state.isSearchClicked = true;
+    },
   },
 });
 
@@ -47,6 +57,16 @@ export const {
   getQecgListData,
   setLoggedInUserTeamLead,
   lockQecgForm,
+  setTabValue,
+  toggleSearchClicked,
 } = landingPageSlice.actions;
 
 export default landingPageSlice.reducer;
+
+export const tabValueState = (state: {
+  landingPage: LandingPageState;
+}): number | string => state.landingPage.tabValue;
+
+export const searchClickstate = (state: {
+  landingPage: LandingPageState;
+}): boolean => state.landingPage.isSearchClicked;

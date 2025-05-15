@@ -11,12 +11,17 @@ import SelectElement from "../../../../common/atoms/selectElement/index";
 import TextfieldElement from "../../../../common/atoms/textfieldElement/index";
 import DatePickerElement from "../../../../common/atoms/datePickerElement/index";
 import TimePickerElement from "../../../../common/atoms/timePickerElement/index";
+import {
+  toggleSearchClicked,
+  searchClickstate,
+} from "../../../../landingPage/slice/landingPageSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 interface SearchOptionsGridProps {
-  searchClick: any;
+  hasBorder?: boolean;
 }
 const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
-  searchClick,
+  hasBorder = false,
 }) => {
   const [selectStateNum, setSelectStateNum] = useState("");
   const [selectStateId, setSelectStateId] = useState("");
@@ -25,6 +30,9 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
   const [selectStateInterpret, setSelectStateIntepret] = useState("");
   const [selectStateDCF, setSelectStateDCF] = useState("");
   const [selectStateDays, setSelectStateDays] = useState("");
+
+  const dispatch = useDispatch();
+  const searchEvent = useSelector(searchClickstate);
 
   const handleChangeNumber = (e: any) => {
     setSelectStateNum(e.target.value);
@@ -46,6 +54,11 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
   };
   const handleChangeDays = (e: any) => {
     setSelectStateDays(e.target.value);
+  };
+  const searchClick1 = () => {
+    console.log("search clicked", searchEvent);
+
+    dispatch(toggleSearchClicked());
   };
 
   const selectProtocolNumberValue = [
@@ -109,18 +122,45 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
     { value: "7", name: "7" },
   ];
   return (
-    <Card style={{ marginTop: "0.5rem", padding: "0.25rem" }}>
-      <Grid container spacing={1} columnGap={1}>
+    <Card
+      style={{
+        marginTop: "0.5rem",
+        padding: "0.25rem",
+        border: hasBorder ? "1px solid black" : "none",
+      }}
+      className="no-border"
+    >
+      <Grid
+        container
+        spacing={1}
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "1rem",
+        }}
+      >
         <Grid
           item
-          xs={3.5}
           style={{
+            flex: "1 1 calc(33.33% - 1rem)", // Adjusts to 3 columns, wraps on smaller screens
             backgroundColor: "rgb(249 249 249)",
             paddingRight: "0.5rem",
+            minWidth: "250px", // Ensures a minimum width for smaller screens
           }}
         >
           <SelectElement
-            label="Select Protocol Number"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                Select Protocol Number
+              </span>
+            }
             placeholder="Select"
             value={selectStateNum}
             onChange={handleChangeNumber}
@@ -129,16 +169,38 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
             menuItems={selectProtocolNumberValue}
           />
           <SelectElement
-            menuItems={siteIdMenuItem}
-            label="Project Site ID"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                Project Site ID
+              </span>
+            }
             placeholder="Select"
             value={selectStateId}
             onChange={handleChangeId}
             size="small"
             isFullWidth
+            menuItems={siteIdMenuItem}
           />
           <SelectElement
-            label="Subject ID"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                Subject ID
+              </span>
+            }
             placeholder="Select"
             value={selectStateSubId}
             onChange={handleChangeSubId}
@@ -147,7 +209,18 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
             menuItems={subjectIdMenuItems}
           />
           <SelectElement
-            label="Visit ID"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                Visit ID
+              </span>
+            }
             placeholder="Select"
             value={selectStateVisitId}
             onChange={handleChangeVisitId}
@@ -158,15 +231,42 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
         </Grid>
         <Grid
           item
-          xs={3.5}
           style={{
+            flex: "1 1 calc(33.33% - 1rem)",
             backgroundColor: "rgb(249 249 249)",
             paddingRight: "0.5rem",
+            minWidth: "250px",
           }}
         >
-          <TextfieldElement label="ECG ID" size="small" isFullWidth />
+          <TextfieldElement
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                ECG ID
+              </span>
+            }
+            size="small"
+            isFullWidth
+          />
           <SelectElement
-            label="Overall Interpretation"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                Overall Interpretation
+              </span>
+            }
             placeholder="Select"
             value={selectStateInterpret}
             onChange={handleChangeInterpret}
@@ -175,40 +275,108 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
             menuItems={overAllInterpretationMenuItems}
           />
           <DatePickerElement
-            label="ECG Recording Start Date:"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                ECG Recording Start Date:
+              </span>
+            }
             isFullWidth
             size="small"
           />
-          {/* <div className={styles.datePicker}></div> */}
           <TextfieldElement
-            label="ECG Recording Start Time:"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                ECG Recording Start Time:
+              </span>
+            }
             size="small"
             isFullWidth
           />
           <DatePickerElement
-            label="ECG Recording End Date:"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                ECG Recording End Date:
+              </span>
+            }
             isFullWidth
             size="small"
           />
-          {/* <div className={styles.datePicker}></div> */}
           <TextfieldElement
-            label="ECG Recording Start Time:"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                ECG Recording Start Time:
+              </span>
+            }
             size="small"
             isFullWidth
-            // className={styles.common}
           />
         </Grid>
         <Grid
           item
-          xs={3.5}
           style={{
+            flex: "1 1 calc(33.33% - 1rem)",
             backgroundColor: "rgb(249 249 249)",
             paddingRight: "0.5rem",
+            minWidth: "250px",
           }}
         >
-          <TextfieldElement label="DCF ID:" size="small" isFullWidth />
+          <TextfieldElement
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                DCF ID:
+              </span>
+            }
+            size="small"
+            isFullWidth
+          />
           <SelectElement
-            label="DCF Type"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                DCF Type
+              </span>
+            }
             placeholder=""
             value={selectStateDCF}
             onChange={handleChangeDCFType}
@@ -216,9 +384,19 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
             isFullWidth
             menuItems={dcfTypeMenuItems}
           />
-
           <SelectElement
-            label="Outstanding Days"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                Outstanding Days
+              </span>
+            }
             placeholder="Select"
             value={selectStateDays}
             onChange={handleChangeDays}
@@ -227,34 +405,74 @@ const SearchOptionsGrid: React.FC<SearchOptionsGridProps> = ({
             size="small"
             menuItems={outstandingDaysMenuItems}
           />
-
           <DatePickerElement
-            label="DCF Issued Start Date:"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                DCF Issued Start Date:
+              </span>
+            }
             isFullWidth
             size="small"
           />
-          {/* <div className={styles.datePicker}></div> */}
           <TextfieldElement
-            label="DCF Issue Start Time"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                DCF Issue Start Time
+              </span>
+            }
             size="small"
             isFullWidth
           />
           <DatePickerElement
-            label="DCF Issue End Date:"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                DCF Issue End Date:
+              </span>
+            }
             isFullWidth
             size="small"
           />
-          {/* <div className={styles.datePicker}>
-          </div> */}
           <TextfieldElement
-            label="DCF Issue End Time"
+            label={
+              <span
+                style={{
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                DCF Issue End Time
+              </span>
+            }
             size="small"
             isFullWidth
           />
         </Grid>
       </Grid>
       <div className={styles.Search}>
-        <Button variant="tertiary" onClick={searchClick}>
+        <Button variant="tertiary" onClick={searchClick1}>
           Search
         </Button>
       </div>

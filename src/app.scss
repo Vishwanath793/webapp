@@ -5,3 +5,26 @@ body {
   border: 0;
   font-family: Proxima Nova, Noto Sans, Helvetica, Arial, sans-serif;
 }
+
+.MuiInput-input:hover {
+  outline: none !important;
+  offset: none !important;
+}
+
+.MuiInput-input:focus {
+  outline: none !important;
+  offset: none !important;
+}
+
+.MuiMenuItem-root {
+  min-height: 20px !important;
+  padding-top: 2px;
+  padding-right: 16px;
+  padding-bottom: 2px !important;
+  padding-left: 8px;
+  gap: 8px;
+  font-size: 12px !important;
+  height: unset;
+}
+
+

@@ -1,0 +1,46 @@
+.DetailsPage {
+  table {
+    thead {
+      tr {
+        height: 2rem !important;
+        th {
+          font-size: 0.8rem !important;
+          font-weight: 500 !important;
+          color: black !important;
+        }
+      }
+    }
+    tbody {
+      tr {
+        height: 2rem !important;
+        p,
+        a,
+        td {
+          font-size: 0.9rem !important;
+          font-weight: 500 !important;
+        }
+      }
+    }
+    tfoot {
+      tr {
+        td {
+          div {
+            height: 2.2rem !important;
+            min-height: 0.1rem !important;
+            font-size: 0.8rem !important;
+            font-weight: 500 !important;
+            div,
+            input,
+            svg {
+              font-size: 0.8rem !important;
+              height: 1.35rem !important;
+              min-height: 0.1rem !important;
+              margin-bottom: 0.15rem !important;
+              padding-left: 0.4rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

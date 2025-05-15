@@ -16,51 +16,6 @@ export const rowsEcgs: Array<{
     ),
     noofecgs: 695,
   },
-  {
-    legendkey: "EPDC",
-    tasksummary: (
-      <div>
-        <Link size="small" href="#/Navigation?id=link">
-          ECGs Pending Data Clarification
-        </Link>
-      </div>
-    ),
-    noofecgs: 3,
-  },
-  {
-    legendkey: "EREC",
-    tasksummary: (
-      <div>
-        <Link size="small" href="#/Navigation?id=link">
-          ECGs Received
-        </Link>
-      </div>
-    ),
-    noofecgs: 766,
-  },
-
-  {
-    legendkey: "",
-    tasksummary: (
-      <div>
-        <Link size="small" href="#/Navigation?id=link">
-          Number of Project Sites
-        </Link>
-      </div>
-    ),
-    noofecgs: 8,
-  },
-  {
-    legendkey: "",
-    tasksummary: (
-      <div>
-        <Typography variant="body2">
-          Estimated number of ECGs for the Study
-        </Typography>
-      </div>
-    ),
-    noofecgs: 3026,
-  },
 ];
 
 export const rowsDcfs: Array<{

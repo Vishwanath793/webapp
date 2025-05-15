@@ -5,7 +5,7 @@ interface ChartDataPoint {
 }
 
 interface ChartData {
-  label: string;
+  label: string | React.ReactNode;
   data: ChartDataPoint[];
 }
 interface taskColumn {
@@ -292,27 +292,21 @@ export const dataLineChart: ChartData[] = [
   {
     label: "ECGs",
     data: [
-      { x: "", y: 0 },
-      { x: "Apr", y: 0 },
-      { x: "May", y: 0 },
       { x: "Jun", y: 0 },
       { x: "Jul", y: 0 },
       { x: "Aug", y: 0 },
       { x: "Sep", y: 0 },
-      { x: "Oct", y: 0 },
-      { x: "Nov", y: 1200 },
-      { x: "Dec", y: 1200 },
-      { x: "Jan", y: 100 },
-      { x: "Feb", y: 0 },
-      { x: "Mar", y: 0 },
+      { x: "Oct", y: 1 },
+      { x: "Nov", y: 60 },
+      { x: "Dec", y: 0 },
+      { x: "Jan", y: 3 },
+      { x: "Feb", y: 5 },
+      { x: "Mar", y: 10 },
     ],
   },
   {
     label: "DCFs",
     data: [
-      { x: "", y: 0 },
-      { x: "Apr", y: 0 },
-      { x: "May", y: 0 },
       { x: "Jun", y: 0 },
       { x: "Jul", y: 0 },
       { x: "Aug", y: 0 },
@@ -322,7 +316,9 @@ export const dataLineChart: ChartData[] = [
       { x: "Dec", y: 0 },
       { x: "Jan", y: 0 },
       { x: "Feb", y: 0 },
-      { x: "Mar", y: 100 },
+      { x: "Mar", y: 0 },
+      { x: "Apr", y: 3 },
+      { x: "May", y: 0 },
     ],
   },
 ];

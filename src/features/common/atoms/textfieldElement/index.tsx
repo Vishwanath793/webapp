@@ -4,7 +4,7 @@ import TextField from "apollo-react/components/TextField";
 import Styles from "./textFieldElement.module.scss";
 
 interface TextfieldProps {
-  label: string;
+  label: string | React.ReactNode;
   placeholder?: string;
   helperText?: string;
   defaultValue?: string;
@@ -17,7 +17,7 @@ interface TextfieldProps {
 
 const TextfieldElement: FC<TextfieldProps> = ({
   label,
-  placeholder = "help",
+  placeholder = "",
   helperText = "",
   defaultValue,
   isError = false,

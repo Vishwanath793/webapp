@@ -3,7 +3,7 @@ import Styles from "./datePickerElement.module.scss";
 import DatePicker from "apollo-react/components/DatePicker";
 
 interface DatePickerProps {
-  label: string;
+  label: string | React.ReactNode;
   helperText?: string;
   isFullWidth: boolean;
   size: "small" | "medium";

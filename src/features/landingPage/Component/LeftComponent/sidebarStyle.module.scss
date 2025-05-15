@@ -8,6 +8,7 @@
 
 .myLinks {
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
   box-sizing: border-box;
   border: 1px solid white;
   padding: 0.5rem;
@@ -18,7 +19,11 @@
   border: 1px solid white;
   padding: 0.5rem;
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
   border-radius: 0.5rem;
+}
+.marginpt5rem {
+  margin-bottom: 0.5rem;
 }
 .reports {
   box-sizing: border-box;

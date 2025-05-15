@@ -3,7 +3,7 @@ import Styles from "./timePickerElement.module.scss";
 import TimePicker from "apollo-react/components/TimePicker";
 
 interface TimePickerProps {
-  label: string;
+  label: string | React.ReactNode;
   helperText?: string;
   isFullWidth: boolean;
   size: "small" | "medium";
